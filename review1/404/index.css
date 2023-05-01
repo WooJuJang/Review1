@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #24145e;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes shrinkAndGrow {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes expandHorizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes appearFormBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes shakeingUpAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes soaking {
+  to {
+    transform: translateY(-250px) scale(0);
+  }
+}
+@keyframes shrinkHorizontal {
+  to {
+    transform: scaleX(0);
+  }
+}
+#planet_2 {
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /*svg는 그림 하나당 한개의 박스로 되어잇음 그리고 기본적으로 전체 svg기준으로 애니메이션 동작*/
+  transform-box: fill-box; /*가장 가까운 박스(즉 자기자신)을 기준으로 돌겠다는 것*/
+  transform-origin: center; /*변형의 중심을 센터로 한다*/
+}
+
+#planet_1 {
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-timing-function: linear;
+}
+
+#star_6 {
+  animation: shrinkAndGrow 4s infinite; /*축약형*/
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_3 {
+  animation: shrinkAndGrow 2s infinite; /*축약형*/
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_5 {
+  animation: shrinkAndGrow 6s infinite; /*축약형*/
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_7 {
+  animation: shrinkAndGrow 1s infinite; /*축약형*/
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_9 {
+  animation: shrinkAndGrow 11s infinite; /*축약형*/
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#UFO-beam {
+  animation: expandHorizontal 3.5s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#number-0 {
+  animation: appearFormBottom 3s;
+  animation-timing-function: cubic-bezier(0.14, 1.46, 0.84, -0.43);
+}
+
+#alien_hand-R,
+#alien_hand-L {
+  animation: shakeingUpAndDown 1s infinite;
+}
+
+#number-0-soaking {
+  animation: soaking 2s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#UFO-beam-disappearing {
+  animation: shrinkHorizontal 2s;
+  transform-box: fill-box;
+  transform-origin: center;
+}

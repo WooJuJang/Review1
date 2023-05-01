@@ -1,0 +1,52 @@
+#fontSize {
+  background-color: aqua;
+  font-size: 14px;
+  transition: font-size 4s ease 2s;
+}
+#fontSize:hover {
+  font-size: 30px;
+}
+
+#translate {
+  margin-top: 50px;
+  background-color: skyblue;
+  height: 140px;
+  width: 140px;
+}
+#translate:hover {
+  transform: translateX(50%);
+  transition: transform 3s linear;
+}
+
+#scale {
+  margin-top: 50px;
+  background-color: blueviolet;
+  height: 140px;
+  width: 140px;
+}
+#scale:hover {
+  transform: scale(3) translateX(50%);
+  transition: transform 3s ease-in-out 1s;
+}
+
+#rotate {
+  margin-top: 50px;
+  background-color: navy;
+  height: 140px;
+  width: 140px;
+}
+#rotate:hover {
+  transform: rotate(90deg);
+  transition: transform 3s ease-in;
+}
+
+#skew {
+  margin-top: 50px;
+  background-color: pink;
+  height: 140px;
+  width: 140px;
+}
+#skew:hover {
+  transform: skew(15deg, 15deg) translateX(50%);
+  transition: transform 3s ease-in-out;
+}

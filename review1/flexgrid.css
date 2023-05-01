@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  width: 800;
+  background-color: black;
+  margin: 10px 0;
+}
+
+#child1 {
+  background-color: red;
+  flex-grow: 1;
+}
+#child2 {
+  background-color: aqua;
+  flex-grow: 1;
+}
+#child3 {
+  background-color: cadetblue;
+  flex-grow: 1;
+}
+#grow1 {
+  background-color: red;
+  flex-grow: 1;
+}
+#grow2 {
+  background-color: aqua;
+  flex-grow: 2;
+}
+#grow3 {
+  background-color: cadetblue;
+  flex-grow: 3;
+}
+
+#container-shrink {
+  display: flex;
+  width: 400;
+  background-color: black;
+  margin: 10px 0;
+}
+#child-shrink01 {
+  background-color: red;
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+#child-shrink02 {
+  background-color: aqua;
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+#child-shrink03 {
+  background-color: cadetblue;
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+#child-shrink1 {
+  background-color: red;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+#child-shrink2 {
+  background-color: aqua;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+#child-shrink3 {
+  background-color: cadetblue;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+#shrink1 {
+  background-color: red;
+  flex-basis: 300px;
+  flex-shrink: 1;
+}
+#shrink2 {
+  background-color: aqua;
+  flex-basis: 300px;
+  flex-shrink: 2;
+}
+#shrink3 {
+  background-color: cadetblue;
+  flex-basis: 300px;
+  flex-shrink: 3;
+}
+
+#container-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(3, 200px);
+}

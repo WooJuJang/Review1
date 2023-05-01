@@ -1,0 +1,33 @@
+#parallax-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  perspective: 2px;
+  /*숫자가 커질수록 멀리서 보는 효과*/
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#parallax-A {
+  background-color: red;
+  height: 150rem;
+}
+
+#parallax-B {
+  background-color: aqua;
+  height: 300px;
+  transform: translateZ(-5px);
+  /*perspective값이 커지면 요소도 더 뒤로 보내야 해서 같이 값을 늘려야 함*/
+}
+
+#parallax-C {
+  top: 300px;
+  background-color: blueviolet;
+  height: 200px;
+
+  transform: translateZ(-4px);
+}
